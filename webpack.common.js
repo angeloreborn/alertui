@@ -5,12 +5,6 @@ module.exports = {
   entry: {
     app: './dist/alertui.js',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Production',
-      template: 'index.html'
-    }),
-  ],
   output: {
     library: 'ui',
     filename: 'alertui.min.js',
