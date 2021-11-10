@@ -19,7 +19,7 @@
     <!-- MDB Script -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
     <!-- Alert UI -->
-    <script src="./build/alertui.min.js" defer></script>
+    <script src="./v1/0/1/alertui.min.js" defer></script>
 </head>
 
 <body class="d-flex flex-column align-items-center justify-content-center">
@@ -48,10 +48,9 @@
                     Changelog
                 </button>
             </li>
-            <li>
-                <button class="nav-link" id="download-tab" data-mdb-toggle="tab" data-mdb-target="#download" type="button" role="tab"
-                    aria-controls="profile" aria-selected="false">
-                    <i class="fas fa-download"></i>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="download-tab0" data-mdb-toggle="tab" data-mdb-target="#download"
+                    type="button" role="tab" aria-controls="contact" aria-selected="false">
                     Download
                 </button>
             </li>
@@ -236,41 +235,54 @@
             Tab 3 content
         </div>
         <div class="tab-pane fade container-fluid text-center" id="download" role="tabpanel" aria-labelledby="download-tab">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="align-middle" scope="col">Description</th>
-                        <th class="align-middle" scope="col">Support</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Row -->
-                    <tr>
-                        <th class="align-middle" scope="row">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <img style="padding:5px" width="40" height="40" alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg"/>
-                                </div>
-                                <div>
-                                    Google Chrome
-                                    <div>
-                                        <small style="font-weight: 100;">Full support for V8 Chromium browsers</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </th>
-                        <td class="align-middle"><span class="badge rounded-pill bg-primary">
-                                <a class="btn btn-primary" download="true" href="alertui.min.js" style="background-color: #55acee;" role="button">
-                                    <i class="fas fa-download"></i>
-                                    Download
-                                </a>
-                            </span></td>
-                        </tr>
-                        
-                        <!-- Row -->
-                    </tbody>
-            </table>
+            <div class="accordion" style="width: 80%; max-width: 800px; margin-left: auto; margin-right: auto;"
+                id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Alert UI - V1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show text-align-center"
+                        aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="align-middle" scope="col">Description</th>
+                                        <th class="align-middle" style="width: 200px;" scope="col">Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Row -->
+                                    <tr>
+                                        <th class="align-middle" scope="row">
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    Alert UI
+                                                    <div>
+                                                        <small style="font-weight: 100;">First verion of alert ui</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                        </th>
+                                        <td class="align-middle tex">
+                                                <a class="btn btn-primary" download="true" href="v1/0/1/alertui.min.js" style="background-color: #55acee;" role="button">
+                                                    <i class="fas fa-download"></i>
+                                                    Download <small>v1.0.1</small>
+                                                </a>
+                                            </span></td>
+                                        </tr>
+                                        
+                                        <!-- Row -->
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>         
         </div>
     </div>
 </body>
