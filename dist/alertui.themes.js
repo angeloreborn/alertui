@@ -8,11 +8,12 @@ let GroupStyle = (...args) => {
     }
     return args[0];
 };
+// TODO: Group style on generic themes (class normalization)
 exports.lightTheme = {
     backdrop: alertui_styles_1.lightBackdropStyle,
     container: alertui_styles_1.lightContainerStyle,
-    header: alertui_styles_1.lightContentContainerStyle,
-    body: alertui_styles_1.lightContentContainerStyle,
+    header: alertui_styles_1.lightHeaderContainerStyle,
+    body: alertui_styles_1.lightBodyContainerStyle,
     action: alertui_styles_1.lightContentContainerStyle,
     footer: alertui_styles_1.lightFooterContainerStyle,
     loader: alertui_styles_1.lightContentLoaderStyle,

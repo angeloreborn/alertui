@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.buttonSecondaryStyle = exports.buttonPrimaryStyle = exports.buttonStyle = exports.lightContentLoaderStyle = exports.lightBackdropStyle = exports.lightFooterContainerStyle = exports.lightContentContainerStyle = exports.lightContainerStyle = void 0;
+exports.buttonSecondaryStyle = exports.buttonPrimaryStyle = exports.buttonStyle = exports.lightContentLoaderStyle = exports.lightBackdropStyle = exports.lightFooterContainerStyle = exports.lightBodyContainerStyle = exports.lightHeaderContainerStyle = exports.lightContentContainerStyle = exports.lightContainerStyle = void 0;
 exports.lightContainerStyle = {
     minWidth: "400px",
     minHeight: "100px",
@@ -15,11 +15,26 @@ exports.lightContentContainerStyle = {
     textAlign: "center",
     padding: "10px 15px 10px 15px"
 };
+exports.lightHeaderContainerStyle = {
+    backfaceVisibility: "hidden",
+    fontSize: "23px",
+    fontWeight: "400",
+    textAlign: "center",
+    padding: "10px 15px 10px 15px"
+};
+exports.lightBodyContainerStyle = {
+    backfaceVisibility: "hidden",
+    fontSize: "18px",
+    fontWeight: "100",
+    textAlign: "center",
+    padding: "10px 15px 10px 15px"
+};
 exports.lightFooterContainerStyle = {
     backfaceVisibility: "hidden",
     fontSize: "14px",
     fontWeight: "100",
     textAlign: "center",
+    padding: "10px 15px 10px 15px"
 };
 exports.lightBackdropStyle = {
     background: "rgba(0,0,0,0.5)",

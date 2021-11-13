@@ -13,11 +13,27 @@ export const lightContentContainerStyle: OptionalStyleDeclaration = {
     textAlign: "center",
     padding: "10px 15px 10px 15px"
 }
+export const lightHeaderContainerStyle : OptionalStyleDeclaration = {
+    backfaceVisibility: "hidden",
+    fontSize: "23px",
+    fontWeight: "400",
+    textAlign: "center",
+    padding: "10px 15px 10px 15px"
+}
+export const lightBodyContainerStyle : OptionalStyleDeclaration = {
+    backfaceVisibility: "hidden",
+    fontSize: "18px",
+    fontWeight: "100",
+    textAlign: "center",
+    padding: "10px 15px 10px 15px"
+}
+
 export const lightFooterContainerStyle : OptionalStyleDeclaration = {
     backfaceVisibility: "hidden",
     fontSize: "14px",
     fontWeight: "100",
     textAlign: "center",
+    padding: "10px 15px 10px 15px"
 }
 export const lightBackdropStyle : OptionalStyleDeclaration = {
     background: "rgba(0,0,0,0.5)",

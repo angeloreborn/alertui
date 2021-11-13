@@ -6,7 +6,9 @@ import {
     lightContentLoaderStyle,
     buttonStyle,
     buttonPrimaryStyle,
-    buttonSecondaryStyle
+    buttonSecondaryStyle,
+    lightHeaderContainerStyle,
+    lightBodyContainerStyle
 } from './alertui.styles'
 
 
@@ -17,11 +19,12 @@ let GroupStyle = (...args : OptionalStyleDeclaration[]) : OptionalStyleDeclarati
     return args[0];
 }
 
+// TODO: Group style on generic themes (class normalization)
 export const lightTheme: AlertUITheme = {
     backdrop: lightBackdropStyle,
     container:lightContainerStyle,
-    header:lightContentContainerStyle,
-    body:lightContentContainerStyle,
+    header:lightHeaderContainerStyle,
+    body:lightBodyContainerStyle,
     action:lightContentContainerStyle,
     footer:lightFooterContainerStyle,
     loader: lightContentLoaderStyle,
