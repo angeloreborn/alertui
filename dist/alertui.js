@@ -72,7 +72,6 @@ let renderPopup = (config) => {
     }
     // Actions
     if (config.actions != null) {
-        console.log(config.actions);
         config.actions.forEach((action) => {
             let newButton = createButtonElement();
             if (action.className) {
@@ -102,7 +101,6 @@ let renderPopup = (config) => {
                     };
                 }
                 else {
-                    console.log('hidingin');
                     newButton.onclick = (e) => {
                         unlock();
                         hidePopup();
