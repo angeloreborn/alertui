@@ -134,10 +134,7 @@ let renderPopup = (config: Config) => {
                     }
                 }
             } else {
-                newButton.onclick = () => {
-                    unlock()
-                    hidePopup()
-                }
+                newButton.onclick = hidePopup
             }
             ui_action_container.appendChild(newButton)
         })

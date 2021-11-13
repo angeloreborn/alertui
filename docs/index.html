@@ -22,12 +22,29 @@
     <script src="./v1/0/1/alertui.min.js" defer></script>
 </head>
 
+
+<style>
+    .code {
+        background: rgb(250, 250, 250) !important;
+        transition-duration: 0.6s;
+    }
+
+    .code:hover {
+
+        cursor: pointer;
+        background: rgb(240, 240, 240) !important;
+    }
+
+    .pln {
+        color: #1266f1;
+    }
+</style>
+
 <body class="d-flex flex-column align-items-center justify-content-center">
-    <!-- <code>
-        <pre class="prettyprint lang-js">
-            function g (){}
-          </pre>
-    </code> -->
+    <div class="d-flex m-2">
+        <h3>Alert</h3>
+        <h3 style="color: #1266f1;">UI</h3>
+    </div>
     <div>
         <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
             <li class="nav-item" role="presentation">
@@ -84,42 +101,50 @@
                                         <th class="align-middle" scope="row">
                                             Single file only
                                             <div>
-                                                <small style="font-weight: 100;">Everything you need is packaged in 1 file keeping things as simple as possible</small>
+                                                <small style="font-weight: 100;">Everything you need is packaged in 1
+                                                    file keeping things as simple as possible</small>
                                             </div>
 
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Supported</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓
+                                                Supported</span></td>
                                     </tr>
                                     <!-- Row -->
                                     <tr>
                                         <th class="align-middle" scope="row">
                                             Lightweight &#60;10kb
                                             <div>
-                                                <small style="font-weight: 100;">Library will always remain under 10kb in size</small>
+                                                <small style="font-weight: 100;">Library will always remain under 10kb
+                                                    in size</small>
                                             </div>
 
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Supported</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓
+                                                Supported</span></td>
                                     </tr>
                                     <!-- Row -->
                                     <tr>
                                         <th class="align-middle" scope="row">
                                             Configurable Animations
                                             <div>
-                                                <small style="font-weight: 100;">Configure the mode, duration and timing of all animations</small>
+                                                <small style="font-weight: 100;">Configure the mode, duration and timing
+                                                    of all animations</small>
                                             </div>
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Supported</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓
+                                                Supported</span></td>
                                     </tr>
                                     <!-- Row -->
                                     <tr>
                                         <th class="align-middle" scope="row">
                                             Custom CSS
                                             <div>
-                                                <small style="font-weight: 100;">Use your apps css classes to style containers and elements</small>
+                                                <small style="font-weight: 100;">Use your apps css classes to style
+                                                    containers and elements</small>
                                             </div>
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Supported</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓
+                                                Supported</span></td>
                                     </tr>
 
                                 </tbody>
@@ -150,20 +175,23 @@
                                         <th class="align-middle" scope="row">
                                             <div class="d-flex align-items-center">
                                                 <div>
-                                                    <img style="padding:5px" width="40" height="40" alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg"/>
+                                                    <img style="padding:5px" width="40" height="40" alt="Chrome"
+                                                        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" />
                                                 </div>
                                                 <div>
                                                     Google Chrome
                                                     <div>
-                                                        <small style="font-weight: 100;">Full support for V8 Chromium browsers</small>
+                                                        <small style="font-weight: 100;">Full support for V8 Chromium
+                                                            browsers</small>
                                                     </div>
                                                 </div>
                                             </div>
-   
+
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full Support</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full
+                                                Support</span></td>
                                     </tr>
-                                    
+
                                     <!-- Row -->
                                     <tr>
                                         <th class="align-middle" scope="row">
@@ -175,12 +203,14 @@
                                                 <div>
                                                     Firefox
                                                     <div>
-                                                        <small style="font-weight: 100;">Full support for Firefox</small>
+                                                        <small style="font-weight: 100;">Full support for
+                                                            Firefox</small>
                                                     </div>
                                                 </div>
                                             </div>
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full Support</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full
+                                                Support</span></td>
                                     </tr>
                                     <!-- Row -->
                                     <tr>
@@ -193,48 +223,218 @@
                                                 <div>
                                                     Opera
                                                     <div>
-                                                        <small style="font-weight: 100;">Full support for Opera/Opera GX</small>
+                                                        <small style="font-weight: 100;">Full support for Opera/Opera
+                                                            GX</small>
                                                     </div>
                                                 </div>
                                             </div>
                                         </th>
-                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full Support</span></td>
+                                        <td class="align-middle"><span class="badge rounded-pill bg-primary">✓ Full
+                                                Support</span></td>
                                     </tr>
-                                    
-                                    </tbody>
+
+                                </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
-                            data-mdb-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-mdb-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                            until the collapse plugin adds the appropriate classes that we use to style each
-                            element. These classes control the overall appearance, as well as the showing and
-                            hiding via CSS transitions. You can modify any of this with custom CSS or
-                            overriding our default variables. It's also worth noting that just about any HTML
-                            can go within the <strong>.accordion-body</strong>, though the transition does
-                            limit overflow.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade container-fluid text-center" id="profile0" role="tabpanel" aria-labelledby="profile-tab0">
-            Tab 2 content
+        <div class="tab-pane fade container-fluid text-center" id="profile0" role="tabpanel"
+            aria-labelledby="profile-tab0">
+            <div class="d-flex flex-column justify-content-center">
+                <!-- Search -->
+                <div class="m-3 p-3">
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+
+                <!-- Start Usage -->
+                <div>
+                    <div class="card m-5">
+                        <div class="card-body" style="width: auto !important;">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <!-- Alert Ui Click -->
+                                <button type="button" onclick="simple()" class="btn btn-success btn-floating m-2">
+                                    <i class="fas fa-mouse"></i>
+                                </button>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Simple Popup
+                                </h5>
+                            </div>
+
+                            <div class="d-flex inline-flex justify-content-center">
+                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
+                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
+ui.popup({
+    body: "Hello, there!",
+    actions: [{
+        title: "Close",
+        className: "btn btn-default m-2"
+    }]
+})
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let simple = () => {
+                        ui.popup({
+                            body: "Hello, there!",
+                            actions: [{
+                                title: "Close",
+                                className: "btn btn-default m-2"
+                            }]
+                        })
+                    }
+                </script>
+                <!-- End Usage -->
+
+                <!-- Start Usage -->
+                <div>
+                    <div class="card m-5">
+                        <div class="card-body" style="width: auto !important;">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <!-- Alert Ui Click -->
+                                <button type="button" onclick="YesNo()" class="btn btn-success btn-floating m-2">
+                                    <i class="fas fa-mouse"></i>
+                                </button>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Yes/No Popup</h5>
+                            </div>
+
+                            <div class="d-flex inline-flex justify-content-center">
+                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
+                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
+ui.popup({
+    body: "Are you sure you want to do that?",
+    actions: [
+    {
+        title: "no",
+        className: "btn btn-default m-2"
+    },
+    {
+        title: "yes",
+        className: "btn btn-primary m-2",
+        onClick: doSomething
+    }
+]
+})
+
+function doSomething(){
+    console.log("I did something");
+}
+                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let YesNo = () => {
+                        ui.popup({
+                            body: "Are you sure you want to do that?",
+                            actions: [
+                                {
+                                    title: "no",
+                                    className: "btn btn-default m-2"
+                                },
+                                {
+                                    title: "yes",
+                                    className: "btn btn-primary m-2",
+                                    onClick: doSomething
+                                }
+                            ]
+                        })
+                        function doSomething() {
+                            console.log("I did something")
+                        }
+                    }
+                </script>
+                <!-- End Usage -->
+
+                <!-- Start Usage -->
+                <div>
+                    <div class="card m-5">
+                        <div class="card-body" style="width: auto !important;">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <!-- Alert Ui Click -->
+                                <button type="button" onclick="MultiSelect()" class="btn btn-success btn-floating m-2">
+                                    <i class="fas fa-mouse"></i>
+                                </button>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Multiselect Popup</h5>
+                            </div>
+
+                            <div class="d-flex inline-flex justify-content-center">
+                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
+                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
+ui.popup({
+    body: "Whats your favourite mode of transport?",
+    actions: [
+        {
+            title: "Car",
+            className: "btn btn-pimary m-2",
+            onClick: ()=>handleTransportMode("Car")
+        },
+        {
+            title: "Bicycle",
+            className: "btn btn-pimary m-2",
+            onClick: ()=>handleTransportMode("Bicycle")
+        },
+        {
+            title: "Walking",
+            className: "btn btn-pimary m-2",
+            onClick: ()=>handleTransportMode("Walking")
+        },
+    ]
+})
+
+function handleTransportMode(transportMode) {
+    console.log("You selected: " + transportMode);
+}
+                                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let MultiSelect = () => {
+                        ui.popup({
+                            body: "Whats your favourite mode of transport?",
+                            actions: [
+                                {
+                                    title: "Car",
+                                    className: "btn btn-pimary m-2",
+                                    onClick: ()=>handleTransportMode("Car")
+                                },
+                                {
+                                    title: "Bicycle",
+                                    className: "btn btn-pimary m-2",
+                                    onClick: ()=>handleTransportMode("Bicycle")
+                                },
+                                {
+                                    title: "Walking",
+                                    className: "btn btn-pimary m-2",
+                                    onClick: ()=>handleTransportMode("Walking")
+                                },
+                            ]
+                        })
+                        function handleTransportMode(transportMode) {
+                            console.log("You selected: " + transportMode);
+                        }
+                    }
+                </script>
+                <!-- End Usage -->
+
+            </div>
+
         </div>
-        <div class="tab-pane fade container-fluid text-center" id="contact0" role="tabpanel" aria-labelledby="contact-tab0">
+        <div class="tab-pane fade container-fluid text-center" id="contact0" role="tabpanel"
+            aria-labelledby="contact-tab0">
             Tab 3 content
         </div>
-        <div class="tab-pane fade container-fluid text-center" id="download" role="tabpanel" aria-labelledby="download-tab">
+        <div class="tab-pane fade container-fluid text-center" id="download" role="tabpanel"
+            aria-labelledby="download-tab">
             <div class="accordion" style="width: 80%; max-width: 800px; margin-left: auto; margin-right: auto;"
                 id="accordionExample">
                 <div class="accordion-item">
@@ -262,27 +462,31 @@
                                                 <div>
                                                     Alert UI
                                                     <div>
-                                                        <small style="font-weight: 100;">First verion of alert ui</small>
+                                                        <small style="font-weight: 100;">First verion of alert
+                                                            ui</small>
                                                     </div>
                                                 </div>
                                             </div>
-                
+
                                         </th>
                                         <td class="align-middle tex">
-                                                <a class="btn btn-primary" download="alertui.min.js" href="v1/0/1/alertui.min.js" style="background-color: #55acee;" role="button">
-                                                    <i class="fas fa-download"></i>
-                                                    Download <small>v1.0.1</small>
-                                                </a>
-                                            </span></td>
-                                        </tr>
-                                        
-                                        <!-- Row -->
-                                    </tbody>
+                                            <a class="btn btn-primary" download="alertui.min.js"
+                                                href="v1/0/1/alertui.min.js" style="background-color: #55acee;"
+                                                role="button">
+                                                <i class="fas fa-download"></i>
+                                                Download <small>v1.0.1</small>
+                                            </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row -->
+                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
 </body>
