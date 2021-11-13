@@ -91,10 +91,14 @@ let renderPopup = (config) => {
                         lock();
                         setLoadText(action.awaitText);
                         showLoad();
-                        if (action.onClick)
-                            await action.onClick(e);
-                        hideLoad();
-                        unlock();
+                        if (action.onClick) {
+                            let hide = await action.onClick(e);
+                            hideLoad();
+                            unlock();
+                            if (hide === true) {
+                                hidePopup();
+                            }
+                        }
                     };
                 }
                 else {

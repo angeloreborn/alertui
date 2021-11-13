@@ -252,7 +252,7 @@
                 </div>
 
                 <script>
-                    function search(){
+                    function search() {
                         ui.popup({
                             body: "Select Popup",
                             actions: [{
@@ -269,20 +269,30 @@
                                 title: "Multi-Select",
                                 className: 'btn btn-primary m-1',
                                 href: "#multiselect"
+                            },
+                            {
+                                title: "Lock Popup",
+                                className: 'btn btn-primary m-1',
+                                href: "#popuplock"
+                            },
+                            {
+                                title: "Await Popup",
+                                className: 'btn btn-primary m-1',
+                                href: "#loadpopup"
                             }],
-                            style:{
+                            style: {
                                 container: "w-75"
                             }
                         })
                     }
-                    function renderSearch(){
+                    function renderSearch() {
 
                     }
                 </script>
                 <h2 id="actionable">Action Popups</h2>
 
                 <!-- Start Usage -->
-                <div class = "searchable" id="simple">
+                <div class="searchable" id="simple">
                     <div class="card m-5">
                         <div class="card-body" style="width: auto !important;">
                             <div class="d-flex justify-content-center align-items-center">
@@ -293,8 +303,9 @@
                                 <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Simple Popup
                                 </h5>
                             </div>
-                             <!-- Description -->
-                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Simple popup with text and close button.</label>
+                            <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Simple popup with text
+                                and close button.</label>
 
                             <div class="d-flex inline-flex justify-content-center">
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
@@ -336,8 +347,9 @@ ui.popup({
                                 <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Yes/No Popup</h5>
                             </div>
 
-                                  <!-- Description -->
-                                  <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Yes or No confirmation popup</label>
+                            <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Yes or No confirmation
+                                popup</label>
 
                             <div class="d-flex inline-flex justify-content-center">
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
@@ -397,14 +409,16 @@ function doSomething(){
                                 <button type="button" onclick="MultiSelect()" class="btn btn-success btn-floating m-2">
                                     <i class="fas fa-mouse"></i>
                                 </button>
-                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Multiselect Popup</h5>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Multiselect Popup
+                                </h5>
                             </div>
 
                             <!-- Description -->
-                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Add multiple actions with on click events</label>
-                            
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Add multiple actions
+                                with on click events</label>
+
                             <div class="d-flex inline-flex justify-content-center">
-                              
+
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
                                     style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
 ui.popup({
@@ -438,7 +452,7 @@ function handleTransportMode(transportMode) {
     })
 }
                                                 </pre>
-                                       
+
                             </div>
                         </div>
                     </div>
@@ -451,25 +465,25 @@ function handleTransportMode(transportMode) {
                                 {
                                     title: "Car",
                                     className: "btn btn-pimary m-2",
-                                    onClick: ()=>handleTransportMode("Car")
+                                    onClick: () => handleTransportMode("Car")
                                 },
                                 {
                                     title: "Bicycle",
                                     className: "btn btn-pimary m-2",
-                                    onClick: ()=>handleTransportMode("Bicycle")
+                                    onClick: () => handleTransportMode("Bicycle")
                                 },
                                 {
                                     title: "Walking",
                                     className: "btn btn-pimary m-2",
-                                    onClick: ()=>handleTransportMode("Walking")
+                                    onClick: () => handleTransportMode("Walking")
                                 },
                             ]
                         })
                         function handleTransportMode(transportMode) {
                             ui.popup({
                                 body: `You selected: <b>${transportMode}</b>`,
-                                actions:[{
-                                    title:"close",
+                                actions: [{
+                                    title: "close",
                                     className: "btn btn-default"
                                 }]
                             })
@@ -478,80 +492,164 @@ function handleTransportMode(transportMode) {
                 </script>
                 <!-- End Usage -->
 
-                                <!-- Start Usage -->
-                                <div id="multiselect">
-                                    <div class="card m-5">
-                                        <div class="card-body" style="width: auto !important;">
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <!-- Alert Ui Click -->
-                                                <button type="button" onclick="LockPopup()" class="btn btn-success btn-floating m-2">
-                                                    <i class="fas fa-mouse"></i>
-                                                </button>
-                                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Lock Popup</h5>
-                                            </div>
-                
-                                            <!-- Description -->
-                                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Prevents closing of popup until an action is selected</label>
-                                            
-                                            <div class="d-flex inline-flex justify-content-center">
-                                              
-                                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
-                                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
-                ui.popup({
-                    body: "Whats your favourite mode of transport?",
-                    actions: [
-                        {
-                            title: "Car",
-                            className: "btn btn-pimary m-2",
-                            onClick: ()=>handleTransportMode("Car")
-                        },
-                        {
-                            title: "Bicycle",
-                            className: "btn btn-pimary m-2",
-                            onClick: ()=>handleTransportMode("Bicycle")
-                        },
-                        {
-                            title: "Walking",
-                            className: "btn btn-pimary m-2",
-                            onClick: ()=>handleTransportMode("Walking")
-                        },
-                    ]
-                })
-                
-                function handleTransportMode(transportMode) {
-                    ui.popup({
-                        body: `You selected: &lt;b&gt;${transportMode}&lt;/b&gt;`,
-                        actions:[{
-                            title:"close",
-                            className: "btn btn-default"
-                        }]
-                    })
-                }
+                <!-- Start Usage -->
+                <div id="popuplock">
+                    <div class="card m-5">
+                        <div class="card-body" style="width: auto !important;">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <!-- Alert Ui Click -->
+                                <button type="button" onclick="LockPopup()" class="btn btn-success btn-floating m-2">
+                                    <i class="fas fa-mouse"></i>
+                                </button>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Lock Popup</h5>
+                            </div>
+
+                            <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Prevents closing of
+                                popup until an action is selected</label>
+
+                            <div class="d-flex inline-flex justify-content-center">
+
+                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
+                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
+ui.popup({
+    body: "Please select one of the actions below",
+    lock: true,
+    actions: [
+        {
+            title: "I am 18+ Years and Older",
+            className: "btn btn-danger m-2",
+        },
+        {
+            title: "I am NOT 18+ Years and Older",
+            className: "btn btn-default m-2",
+        }  
+    ]
+})
                                                                 </pre>
-                                                       
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <script>
-                                    let LockPopup = () => {
-                                        ui.popup({
-                                            body: "Please select one of the actions below",
-                                            lock: true,
-                                            actions: [
-                                                {
-                                                    title: "I am 18+ Years and Older",
-                                                    className: "btn btn-danger m-2",
-                                                },
-                                                {
-                                                    title: "I am NOT 18+ Years and Older",
-                                                    className: "btn btn-default m-2",
-                                                }  
-                                            ]
-                                        })
-                                    }
-                                </script>
-                                <!-- End Usage -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let LockPopup = () => {
+                        ui.popup({
+                            body: "Please select one of the actions below",
+                            lock: true,
+                            actions: [
+                                {
+                                    title: "I am 18+ Years and Older",
+                                    className: "btn btn-danger m-2",
+                                },
+                                {
+                                    title: "I am NOT 18+ Years and Older",
+                                    className: "btn btn-default m-2",
+                                }
+                            ]
+                        })
+                    }
+                </script>
+                <!-- End Usage -->
+
+                <!-- Start Usage -->
+                <div id="loadpopup">
+                    <div class="card m-5">
+                        <div class="card-body" style="width: auto !important;">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <!-- Alert Ui Click -->
+                                <button type="button" onclick="LoadPopup()" class="btn btn-success btn-floating m-2">
+                                    <i class="fas fa-mouse"></i>
+                                </button>
+                                <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Await Action</h5>
+                            </div>
+
+                            <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Waits for an action to be completed before closing the popup</label>
+
+                            <div class="d-flex inline-flex justify-content-center">
+
+                                <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
+                                    style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
+   ui.popup({
+    body: "Please select one of the actions below",
+    lock: true,
+    actions: [
+        {
+            title: "Close",
+            className: "btn btn-default m-2",
+
+        },
+        {
+            title: "Do some task",
+            className: "btn btn-primary m-2",
+            await: true,
+            onClick: doTask
+        }
+    ]
+})
+}
+async function doTask(){
+    await new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            // True -> Hide popup when done
+            // False -> Keep popup if creating new one
+            resolve(false)
+            ui.popup({
+                body: "Completed action!",
+                actions: [{
+                    title: "Ok",
+                    className: "btn btn-primary m-2"
+                }]
+            })
+        },2000) // wait 2 seconds
+    })
+}
+                                                                                                </pre>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let LoadPopup = () => {
+                        ui.popup({
+                            body: "Please select one of the actions below",
+                            lock: true,
+                            actions: [
+                                {
+                                    title: "Close",
+                                    className: "btn btn-default m-2",
+
+                                },
+                                {
+                                    title: "Do some task",
+                                    className: "btn btn-primary m-2",
+                                    await: true,
+                                    onClick: doTask
+                                }
+                            ]
+                        })
+                    }
+                        async function doTask(){
+                            return new Promise((resolve, reject)=>{
+                                setTimeout(()=>{
+                                    // True -> Hide popup when done
+                                    // False -> Keep popup if creating new one
+                                    resolve(false)
+                                    ui.popup({
+                                        body: "Completed action!",
+                                        actions: [{
+                                            title: "Ok",
+                                            className: "btn btn-primary m-2"
+                                        }]
+                                    })
+                                },2000) // wait 2 seconds
+                            })
+                        }
+                
+                </script>
+                <!-- End Usage -->
 
             </div>
 
@@ -619,3 +717,4 @@ function handleTransportMode(transportMode) {
 </body>
 
 </html>
+
