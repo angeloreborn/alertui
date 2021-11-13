@@ -4,7 +4,6 @@ exports.disappearIntoOblivion = exports.defaultfocus = exports.tinyshrink = expo
 // Backdrop
 exports.backdropShow = {
     keyFrames: [
-        { opacity: 0 },
         { opacity: 1, pointerEvents: "all" }
     ],
     options: {
@@ -18,7 +17,8 @@ exports.backdropHide = {
     ],
     options: {
         duration: 250,
-        fill: "forwards"
+        fill: "forwards",
+        delay: 150,
     }
 };
 // Container

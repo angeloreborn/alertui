@@ -4,7 +4,6 @@ import { JsAnimation } from './jsanimate'
 // Backdrop
 export let backdropShow : JsAnimation = {
     keyFrames :  [
-        {opacity: 0},
         {opacity: 1, pointerEvents: "all"}
     ],
     options: {
@@ -19,7 +18,8 @@ export let backdropHide : JsAnimation = {
     ],
     options: {
         duration: 250,
-        fill: "forwards"
+        fill: "forwards",
+        delay: 150,
     }
 } 
 
