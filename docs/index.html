@@ -271,7 +271,7 @@
                                 href: "#multiselect"
                             }],
                             style:{
-                                actions: "w-75"
+                                container: "w-75"
                             }
                         })
                     }
@@ -293,6 +293,8 @@
                                 <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Simple Popup
                                 </h5>
                             </div>
+                             <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Simple popup with text and close button.</label>
 
                             <div class="d-flex inline-flex justify-content-center">
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
@@ -333,6 +335,9 @@ ui.popup({
                                 </button>
                                 <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Yes/No Popup</h5>
                             </div>
+
+                                  <!-- Description -->
+                                  <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Yes or No confirmation popup</label>
 
                             <div class="d-flex inline-flex justify-content-center">
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
@@ -395,6 +400,9 @@ function doSomething(){
                                 <h5 class="card-title d-flex m-2" style="margin: 0; font-weight: 100;">Multiselect Popup</h5>
                             </div>
 
+                            <!-- Description -->
+                            <label style="font-weight: 100; color:rgb(120,120,120); margin: 5px;">Add multiple actions with on click events</label>
+                            
                             <div class="d-flex inline-flex justify-content-center">
                                 <pre class="prettyprint lang-js p-2 shadow-sm p-3 mb-5 bg-white rounded code"
                                     style="border-radius: 5px; text-align: left; border:none; border-left: 2px solid #1266f1; color: #1266f1;">
@@ -450,7 +458,13 @@ function handleTransportMode(transportMode) {
                             ]
                         })
                         function handleTransportMode(transportMode) {
-                            console.log("You selected: " + transportMode);
+                            ui.popup({
+                                body: `You selected: <b>${transportMode}</b>`,
+                                actions:[{
+                                    title:"close",
+                                    className: "btn btn-default"
+                                }]
+                            })
                         }
                     }
                 </script>

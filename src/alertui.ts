@@ -208,6 +208,7 @@ let unlock = () => {
 }
 
 let resetPopup = () => {
+    // Remove content
     while(ui_header_container.firstChild){
         ui_header_container.removeChild(ui_header_container.firstChild)
     }
@@ -220,6 +221,12 @@ let resetPopup = () => {
     while(ui_footer_container.firstChild){
         ui_footer_container.removeChild(ui_footer_container.firstChild)
     }
+    // Reset class
+    ui_container.removeAttribute("class");
+    ui_header_container.removeAttribute("class");
+    ui_body_container.removeAttribute("class");
+    ui_footer_container.removeAttribute("class");
+
 }
 
 
