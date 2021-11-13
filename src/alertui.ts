@@ -22,7 +22,7 @@ type animation = "fade-in" | "fade-out" | "fade-in-left" | "fade-in-right"
 type mode = "success" | "default" | "ok" | "failure" | "error" | "warning"
 
 let createDivElement = () => { return document.createElement('div') }
-let createButtonElement = () => {return document.createElement('button') }
+let createButtonElement = () => {return document.createElement('a') }
 
 let cssAssign: Function = (element: HTMLElement, style: OptionalStyleDeclaration) => { Object.assign(element.style, style) }
 
@@ -112,6 +112,9 @@ let renderPopup = (config: Config) => {
             } else {
                 cssAssign(newButton, selected_theme.button.primary)
             }
+            if (action.href){
+                newButton.href = action.href
+            }
 
             newButton.innerHTML = action.title
 
@@ -159,6 +162,9 @@ let renderPopup = (config: Config) => {
         }
         if (config.style.footer) {
             ui_footer_container.className = config.style.footer
+        }
+        if (config.style.container){
+            ui_container.className = config.style.container;
         }
     }
     showPopup()

@@ -6,7 +6,7 @@ const alertui_animations_1 = require("./alertui.animations");
 const loader_1 = require("./loader");
 const alertui_themes_1 = require("./alertui.themes");
 let createDivElement = () => { return document.createElement('div'); };
-let createButtonElement = () => { return document.createElement('button'); };
+let createButtonElement = () => { return document.createElement('a'); };
 let cssAssign = (element, style) => { Object.assign(element.style, style); };
 let ui_backdrop = createDivElement();
 let ui_container = createDivElement();
@@ -81,6 +81,9 @@ let renderPopup = (config) => {
             else {
                 cssAssign(newButton, selected_theme.button.primary);
             }
+            if (action.href) {
+                newButton.href = action.href;
+            }
             newButton.innerHTML = action.title;
             if (action.onClick) {
                 if (action.await) {
@@ -128,6 +131,9 @@ let renderPopup = (config) => {
         }
         if (config.style.footer) {
             ui_footer_container.className = config.style.footer;
+        }
+        if (config.style.container) {
+            ui_container.className = config.style.container;
         }
     }
     showPopup();

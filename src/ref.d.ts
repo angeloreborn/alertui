@@ -531,6 +531,7 @@ interface Action {
     onClick?: Function,
     await?: boolean,
     awaitText?: string
+    href? : string
 }
 
 interface ContainerStyle {
